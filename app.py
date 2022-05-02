@@ -48,14 +48,16 @@ def home():
         # CHECK IF URL ALREADY EXIST IN DB
         found_url = Urls.query.filter_by(long=url_received).first()
         if found_url:
-            return redirect(url_for("display_short_url", url=found_url.short))
+            return render_template("index.html", short_url_display=found_url.short)
+        # return redirect(url_for("display_short_url", url=found_url.short))
         else:
             # CREATE SHORT URL IF NOT FOUND
             short_url = shorten_url()
             new_url = Urls(url_received, short_url)
             db.session.add(new_url)
             db.session.commit()
-            return redirect(url_for("display_short_url", url=short_url))
+            return render_template("index.html", short_url_display=short_url)
+            # return redirect(url_for("display_short_url", url=short_url))
 
     else:
         return render_template("index.html")

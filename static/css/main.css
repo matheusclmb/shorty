@@ -3,8 +3,32 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #e9ebfc;
+  background-color: #2e303e;
+  margin-top: 300px;
 }
 
 input {
   margin: 4px;
+  color: #e9ebfc;
+  background-color: #1a1b23;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.urlgen {
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  border: none;
+  border-radius: 7px;
+  padding: 2px 95px;
+  color: #e9ebfc;
+  background-color: #1a1b23;
+}
+
+a:hover {
+  text-decoration: none;
 }

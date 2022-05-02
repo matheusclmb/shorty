@@ -49,7 +49,6 @@ def home():
         found_url = Urls.query.filter_by(long=url_received).first()
         if found_url:
             return render_template("index.html", short_url_display=found_url.short)
-        # return redirect(url_for("display_short_url", url=found_url.short))
         else:
             # CREATE SHORT URL IF NOT FOUND
             short_url = shorten_url()
@@ -57,7 +56,6 @@ def home():
             db.session.add(new_url)
             db.session.commit()
             return render_template("index.html", short_url_display=short_url)
-            # return redirect(url_for("display_short_url", url=short_url))
 
     else:
         return render_template("index.html")

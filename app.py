@@ -72,7 +72,7 @@ def redirection(short_url):
     if long_url:
         return redirect(long_url.long)
     else:
-        return f"<h1>Url does not exist</h1>"
+        return render_template("notfound.html")
 
 
 if __name__ == "__main__":

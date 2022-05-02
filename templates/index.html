@@ -17,11 +17,13 @@ content %}
 </form>
 
 {% if short_url_display %}
-<hr />
-<span
-  ><h3>Your short url is:</h3>
-  <a href="{{short_url_display}}" target="_blank"
-    >clmbshort.herokuapp.com/{{short_url_display}}</a
-  ></span
->
+
+<div class="urlgen">
+  <span>
+    <h3>Your short url is:</h3>
+    <a href="{{short_url_display}}" target="_blank"
+      >clmbshort.herokuapp.com/{{short_url_display}}</a
+    >
+  </span>
+</div>
 {% endif %} {% endblock %}

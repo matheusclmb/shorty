@@ -1,3 +1,19 @@
+## Install and Run
+
+Clone the repo
+```bash
+  git clone https://github.com/matheusclmb/shorty.git
+```
+Install the requirements
+```bash  
+  pip install -r requirements.txt
+```
+Run with Python
+```bash
+  python app.py
+```
+
+
 Shorty Challenge
 ================
 
